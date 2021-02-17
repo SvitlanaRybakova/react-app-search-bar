@@ -6,7 +6,7 @@ import { ArticleContext } from '../context/ArticleContext';
 
 function Home(){
   const { articles } = useContext(ArticleContext);
-  console.log(articles);
+  
 
   return(
     <>
@@ -14,12 +14,7 @@ function Home(){
       <Search />
       <div className={articleWrapper}>
         {articles.map(value => <Article key={value.id} data={value} />)}
-         
-          
-         
-          
-       
-      
+     
       </div>
     </div>
     

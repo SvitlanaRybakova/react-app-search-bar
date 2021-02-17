@@ -2,7 +2,6 @@ import {articleItem, title, content, date, author} from '../styles/Article.modul
 
 function Article({ data }) {
 
-  console.log(data);
 
   return (
     <>
