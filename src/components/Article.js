@@ -1,14 +1,17 @@
-import React from 'react';
+import {articleItem, title, content, date, author} from '../styles/Article.module.css';
 
-function Article(){
-  return(
+function Article({ data }) {
+
+  console.log(data);
+
+  return (
     <>
-    <div className="articleItem">
-      <p className="title"></p>
-      <p className="content"></p>
-      <span className="date"></span>
-      <span className="author"></span>
-    </div>
+      <div className={articleItem}>
+        <p className={title}>{data.title}</p>
+        <p className={content}>{data.content}</p>
+        <span className={date}>{data.date}</span>
+        <span className={author}>{data.author}</span>
+      </div>
     </>
   )
 }
