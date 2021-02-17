@@ -1,0 +1,14 @@
+body {
+  background-color: grey;
+}
+
+.container {
+  padding-top: 59px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.articleWrapper {
+  background-color: rgb(68, 67, 67);
+  padding: 20px;
+}

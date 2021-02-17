@@ -1,0 +1,24 @@
+.articleItem{
+  
+  background-color: lightgrey;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.content{
+  text-align: justify;
+}
+.date{
+  font-style: italic;
+  display: block;
+}
+.author{
+font-style: italic;
+text-align: right;
+display: block;
+}
