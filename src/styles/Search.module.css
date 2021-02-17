@@ -1,0 +1,23 @@
+.form{
+  border-radius: 1px solid red;
+}
+.input{
+  display: block;
+  width: 90%;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 16px;
+
+}
+.button{
+  display: block;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 15px 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
