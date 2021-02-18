@@ -1,25 +1,30 @@
-import React,  { useContext } from 'react';
+import React, { useContext } from 'react';
 import Article from '../components/Article';
 import Search from '../components/Search';
 import { container, articleWrapper } from '../styles/Home.module.css';
 import { ArticleContext } from '../context/ArticleContext';
+import NotFound from '../components/NotFound';
 
-function Home(){
+
+
+function Home() {
   const { articles } = useContext(ArticleContext);
-  
+  const { isNecessaryArticle } = useContext(ArticleContext);
 
-  return(
+  return (
     <>
-    <div className={container}>
-      <Search />
-      <div className={articleWrapper}>
-        {articles.map(value => <Article key={value.id} data={value} />)}
-     
+      <div className={container}>
+        <Search />
+        <div className={articleWrapper}>
+          {isNecessaryArticle ?
+            articles.map(value => <Article key={value.id} data={value} />)
+            : <NotFound />}
+
+        </div>
       </div>
-    </div>
-    
+
     </>
-    
+
   )
 }
 export default Home;
