@@ -51,9 +51,7 @@ function ArticleContextProvider(props) {
 
 
   const findArticle = (e) => {
-   
-    
-
+ 
     e.preventDefault();
     setNecessaryArticle(true)
 
@@ -97,10 +95,20 @@ function ArticleContextProvider(props) {
     setSearchInpit(e.target.value);
   }
 
+  const showDeleteButton = (e) => {
+    
+    const deleteButton = e.target.children[0].children[1];
+    // deleteButton
+    console.dir(deleteButton.style);
+    deleteButton.style.color = 'red';
+  }
 
-
+  const hideDEleteButton = (e) => {
+    const deleteButton = e.target.children[0].children[1];
+    deleteButton.style.color = 'transparent';
+  }
   return (
-    <ArticleContext.Provider value={{ articles, searchInput, onChange, findArticle, isNecessaryArticle }}>
+    <ArticleContext.Provider value={{ articles, searchInput, onChange, findArticle, isNecessaryArticle, showDeleteButton, hideDEleteButton }}>
       {props.children}
     </ArticleContext.Provider>
   )
